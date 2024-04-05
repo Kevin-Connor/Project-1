@@ -1,0 +1,17 @@
+
+# Tell Spring where to get the data from
+spring:
+    datasource: 
+        #Postgres
+        url: jdbc:postgresql://localhost:5432/shirts
+        username: postgres
+        password:
+
+    output:
+        ansi:
+            enabled: ALWAYS
+
+logging:
+    level:
+        com:
+            skillstorm: debug
