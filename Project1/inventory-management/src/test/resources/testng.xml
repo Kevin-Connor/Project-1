@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Inventory Management Suite" parallel="false">
+    <test name="Shirt Management Tests">
+        <classes>
+            <!-- Include your TestNG test classes here -->
+            <class name="com.skillstorm.inventorymanagement.cucumber.ShirtsSteps"/>
+            <class name="com.skillstorm.inventorymanagement.models.ShirtTest"/> <!-- Example for model tests -->
+            <class name="com.skillstorm.inventorymanagement.models.WarehouseTest"/> <!-- Example for another model test -->
+            <!-- Add any other test classes you want to include -->
+        </classes>
+    </test>
+</suite>

@@ -19,6 +19,18 @@
 		<java.version>17</java.version>
 	</properties>
 
+	<dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-bom</artifactId>
+                <version>7.11.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -30,13 +42,56 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- Needed for cucumber -->
+		<dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <scope>test</scope>
+        </dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>7.11.1</version>
+			<scope>test</scope>
+		</dependency>
+
 		<!-- Needed for postgres -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 		</dependency>
+		
+		<!-- Needed for TestNG annotations -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.10.2</version>
+			<scope>test</scope>
+		</dependency>
 
-		<!-- Give access to validation annotations -->
+		<!-- Needed to create TestNG reports -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+
+		
+		<!-- Needed for Selenium-->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.23.0</version>
+		</dependency>
+
+		<!-- needed for JaCoCo -->
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.12</version>
+		</dependency>
+
+		 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
@@ -51,16 +106,78 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<exclusions>
+        		<exclusion>
+					<groupId>org.junit.jupiter</groupId>
+					<artifactId>junit-jupiter</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.junit</groupId>
+					<artifactId>junit</artifactId>
+				</exclusion>
+    		</exclusions>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
+          <plugin>
+          	<groupId>org.jacoco</groupId>
+          	<artifactId>jacoco-maven-plugin</artifactId>
+          	<version>0.8.12</version>
+          	<executions>
+            	<execution>
+              		<goals>
+                		<goal>prepare-agent</goal>
+                		<goal>report</goal>
+              		</goals>
+            	</execution>
+				<execution>
+					<id>report</id>
+					<phase>test</phase>
+					<goals>
+						<goal>report</goal>
+					</goals>
+					<configuration>
+						<outputDirectory>${project.build.directory}/site/jacoco</outputDirectory>
+						<output>file</output>
+						<destFile>${project.build.directory}/jacoco.exec</destFile>
+					</configuration>
+				</execution>
+          	</executions>
+        </plugin>
+
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.10.1</version>
+			<configuration>
+				<encoding>UTF-8</encoding>
+				<source>1.8</source>
+				<target>1.8</target>
+			</configuration>
+		</plugin>
+
+		<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.5.0</version>
+			<configuration>
+				<useSystemClassLoader>false</useSystemClassLoader>
+				<includes>
+					<include>**/*Test.java</include>
+				</includes>
+				<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+				<suiteXmlFiles>
+					<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+				</suiteXmlFiles>
+			</configuration>
+        </plugin>
+        </plugins>
 	</build>
 
 </project>
