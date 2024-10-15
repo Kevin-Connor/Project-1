@@ -121,6 +121,7 @@
 				</exclusion>
     		</exclusions>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -162,20 +163,30 @@
 			</configuration>
 		</plugin>
 
-		<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.5.0</version>
-			<configuration>
-				<useSystemClassLoader>false</useSystemClassLoader>
-				<includes>
-					<include>**/*Test.java</include>
-				</includes>
-				<reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
-				<suiteXmlFiles>
-					<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-				</suiteXmlFiles>
-			</configuration>
+ 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.4.0</version>
+                <dependencies>
+                    <!-- forces Surefire to use TestNG -->
+                    <dependency>
+                        <groupId>org.apache.maven.surefire</groupId>
+                        <artifactId>surefire-testng</artifactId>
+                        <version>3.4.0</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+ 
         </plugin>
         </plugins>
 	</build>

@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-    features = "classpath:com/skillstorm/features",
+    features = "classpath:com/skillstorm/features/",
     glue = "com.skillstorm.inventorymanagement.cucumber",
     plugin = {"pretty", "html:target/cucumber-reports.html"}
     )

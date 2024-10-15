@@ -30,94 +30,94 @@ public class Shirt {
 <span class="nc" id="L30">    public Shirt() {</span>
 <span class="nc" id="L31">    }</span>
 
-<span class="nc" id="L33">    public Shirt(String animal, String size, Warehouse warehouse) {</span>
-<span class="nc" id="L34">        this.animal = animal;</span>
-<span class="nc" id="L35">        this.size = size;</span>
-<span class="nc" id="L36">        this.warehouse = warehouse;</span>
-<span class="nc" id="L37">    }</span>
+<span class="fc" id="L33">    public Shirt(String animal, String size, Warehouse warehouse) {</span>
+<span class="fc" id="L34">        this.animal = animal;</span>
+<span class="fc" id="L35">        this.size = size;</span>
+<span class="fc" id="L36">        this.warehouse = warehouse;</span>
+<span class="fc" id="L37">    }</span>
 
-<span class="nc" id="L39">    public Shirt(int id, String animal, String size, Warehouse warehouse) {</span>
-<span class="nc" id="L40">        this.id = id;</span>
-<span class="nc" id="L41">        this.animal = animal;</span>
-<span class="nc" id="L42">        this.size = size;</span>
-<span class="nc" id="L43">        this.warehouse = warehouse;</span>
-<span class="nc" id="L44">    }</span>
+<span class="fc" id="L39">    public Shirt(int id, String animal, String size, Warehouse warehouse) {</span>
+<span class="fc" id="L40">        this.id = id;</span>
+<span class="fc" id="L41">        this.animal = animal;</span>
+<span class="fc" id="L42">        this.size = size;</span>
+<span class="fc" id="L43">        this.warehouse = warehouse;</span>
+<span class="fc" id="L44">    }</span>
 
     public int getId() {
-<span class="nc" id="L47">        return id;</span>
+<span class="fc" id="L47">        return id;</span>
     }
 
     public void setId(int id) {
-<span class="nc" id="L51">        this.id = id;</span>
-<span class="nc" id="L52">    }</span>
+<span class="fc" id="L51">        this.id = id;</span>
+<span class="fc" id="L52">    }</span>
 
     public String getAnimal() {
-<span class="nc" id="L55">        return animal;</span>
+<span class="fc" id="L55">        return animal;</span>
     }
 
     public void setAnimal(String animal) {
-<span class="nc" id="L59">        this.animal = animal;</span>
-<span class="nc" id="L60">    }</span>
+<span class="fc" id="L59">        this.animal = animal;</span>
+<span class="fc" id="L60">    }</span>
 
     public String getSize() {
-<span class="nc" id="L63">        return size;</span>
+<span class="fc" id="L63">        return size;</span>
     }
 
     public void setSize(String size) {
-<span class="nc" id="L67">        this.size = size;</span>
-<span class="nc" id="L68">    }</span>
+<span class="fc" id="L67">        this.size = size;</span>
+<span class="fc" id="L68">    }</span>
 
     public Warehouse getWarehouse() {
-<span class="nc" id="L71">        return warehouse;</span>
+<span class="fc" id="L71">        return warehouse;</span>
     }
 
     public void setWarehouse(Warehouse warehouse) {
-<span class="nc" id="L75">        this.warehouse = warehouse;</span>
-<span class="nc" id="L76">    }</span>
+<span class="fc" id="L75">        this.warehouse = warehouse;</span>
+<span class="fc" id="L76">    }</span>
 
     @Override
     public int hashCode() {
-<span class="nc" id="L80">        final int prime = 31;</span>
-<span class="nc" id="L81">        int result = 1;</span>
-<span class="nc" id="L82">        result = prime * result + id;</span>
-<span class="nc bnc" id="L83" title="All 2 branches missed.">        result = prime * result + ((animal == null) ? 0 : animal.hashCode());</span>
-<span class="nc bnc" id="L84" title="All 2 branches missed.">        result = prime * result + ((size == null) ? 0 : size.hashCode());</span>
-<span class="nc bnc" id="L85" title="All 2 branches missed.">        result = prime * result + ((warehouse == null) ? 0 : warehouse.hashCode());</span>
-<span class="nc" id="L86">        return result;</span>
+<span class="fc" id="L80">        final int prime = 31;</span>
+<span class="fc" id="L81">        int result = 1;</span>
+<span class="fc" id="L82">        result = prime * result + id;</span>
+<span class="pc bpc" id="L83" title="1 of 2 branches missed.">        result = prime * result + ((animal == null) ? 0 : animal.hashCode());</span>
+<span class="pc bpc" id="L84" title="1 of 2 branches missed.">        result = prime * result + ((size == null) ? 0 : size.hashCode());</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">        result = prime * result + ((warehouse == null) ? 0 : warehouse.hashCode());</span>
+<span class="fc" id="L86">        return result;</span>
     }
 
     @Override
     public boolean equals(Object obj) {
-<span class="nc bnc" id="L91" title="All 2 branches missed.">        if (this == obj)</span>
+<span class="pc bpc" id="L91" title="1 of 2 branches missed.">        if (this == obj)</span>
 <span class="nc" id="L92">            return true;</span>
-<span class="nc bnc" id="L93" title="All 2 branches missed.">        if (obj == null)</span>
+<span class="pc bpc" id="L93" title="1 of 2 branches missed.">        if (obj == null)</span>
 <span class="nc" id="L94">            return false;</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">        if (getClass() != obj.getClass())</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">        if (getClass() != obj.getClass())</span>
 <span class="nc" id="L96">            return false;</span>
-<span class="nc" id="L97">        Shirt other = (Shirt) obj;</span>
-<span class="nc bnc" id="L98" title="All 2 branches missed.">        if (id != other.id)</span>
-<span class="nc" id="L99">            return false;</span>
-<span class="nc bnc" id="L100" title="All 2 branches missed.">        if (animal == null) {</span>
+<span class="fc" id="L97">        Shirt other = (Shirt) obj;</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">        if (id != other.id)</span>
+<span class="fc" id="L99">            return false;</span>
+<span class="pc bpc" id="L100" title="1 of 2 branches missed.">        if (animal == null) {</span>
 <span class="nc bnc" id="L101" title="All 2 branches missed.">            if (other.animal != null)</span>
 <span class="nc" id="L102">                return false;</span>
-<span class="nc bnc" id="L103" title="All 2 branches missed.">        } else if (!animal.equals(other.animal))</span>
+<span class="pc bpc" id="L103" title="1 of 2 branches missed.">        } else if (!animal.equals(other.animal))</span>
 <span class="nc" id="L104">            return false;</span>
-<span class="nc bnc" id="L105" title="All 2 branches missed.">        if (size == null) {</span>
+<span class="pc bpc" id="L105" title="1 of 2 branches missed.">        if (size == null) {</span>
 <span class="nc bnc" id="L106" title="All 2 branches missed.">            if (other.size != null)</span>
 <span class="nc" id="L107">                return false;</span>
-<span class="nc bnc" id="L108" title="All 2 branches missed.">        } else if (!size.equals(other.size))</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">        } else if (!size.equals(other.size))</span>
 <span class="nc" id="L109">            return false;</span>
-<span class="nc bnc" id="L110" title="All 2 branches missed.">        if (warehouse == null) {</span>
+<span class="pc bpc" id="L110" title="1 of 2 branches missed.">        if (warehouse == null) {</span>
 <span class="nc bnc" id="L111" title="All 2 branches missed.">            if (other.warehouse != null)</span>
 <span class="nc" id="L112">                return false;</span>
-<span class="nc bnc" id="L113" title="All 2 branches missed.">        } else if (!warehouse.equals(other.warehouse))</span>
+<span class="pc bpc" id="L113" title="1 of 2 branches missed.">        } else if (!warehouse.equals(other.warehouse))</span>
 <span class="nc" id="L114">            return false;</span>
-<span class="nc" id="L115">        return true;</span>
+<span class="fc" id="L115">        return true;</span>
     }
 
     @Override
     public String toString() {
-<span class="nc" id="L120">        return &quot;Shirt [id=&quot; + id + &quot;, animal=&quot; + animal + &quot;, size=&quot; + size + &quot;, warehouse=&quot; + warehouse + &quot;]&quot;;</span>
+<span class="fc" id="L120">        return &quot;Shirt [id=&quot; + id + &quot;, animal=&quot; + animal + &quot;, size=&quot; + size + &quot;, warehouse=&quot; + warehouse + &quot;]&quot;;</span>
     }
 
     

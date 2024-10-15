@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Shirt Management Tests"
+           tests="8"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.001">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testShirts"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testId"
+                time="0.001"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testEquals"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testHashCode"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testCapacity"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testToString"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testWarehouseName"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testCity"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+</testsuite>
