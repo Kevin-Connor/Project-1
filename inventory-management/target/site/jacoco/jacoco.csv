@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+inventory-management,com.skillstorm.inventorymanagement.aspects,LoggingAspect,59,0,2,0,21,0,7,0,6,0
+inventory-management,com.skillstorm.inventorymanagement,CorsConfig,45,0,0,0,8,0,2,0,2,0
+inventory-management,com.skillstorm.inventorymanagement,InventoryManagementApplication,8,0,0,0,3,0,2,0,2,0
+inventory-management,com.skillstorm.inventorymanagement.models,Shirt,196,0,32,0,58,0,30,0,14,0
+inventory-management,com.skillstorm.inventorymanagement.models,Warehouse,235,0,34,0,71,0,34,0,17,0
+inventory-management,com.skillstorm.inventorymanagement.services,WarehouseService,49,0,0,0,11,0,6,0,6,0
+inventory-management,com.skillstorm.inventorymanagement.services,ShirtService,86,0,6,0,23,0,9,0,6,0
+inventory-management,com.skillstorm.inventorymanagement.controllers,WarehouseController,50,0,0,0,11,0,5,0,5,0
+inventory-management,com.skillstorm.inventorymanagement.controllers,ShirtController,49,0,0,0,11,0,6,0,6,0

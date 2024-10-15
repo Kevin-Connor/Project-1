@@ -1,0 +1,12 @@
+com\skillstorm\inventorymanagement\cucumber\WarehouseSteps.class
+com\skillstorm\inventorymanagement\services\ShirtServiceTest.class
+com\skillstorm\inventorymanagement\cucumber\ShirtsSteps.class
+com\skillstorm\inventorymanagement\models\ShirtTest.class
+com\skillstorm\inventorymanagement\controllers\ShirtControllerTest.class
+com\skillstorm\inventorymanagement\models\WarehouseTest.class
+com\skillstorm\inventorymanagement\controllers\WarehouseControllerTest.class
+com\skillstorm\inventorymanagement\selenium\WarehousePage.class
+com\skillstorm\inventorymanagement\selenium\ShirtsPage.class
+com\skillstorm\inventorymanagement\cucumber\RunCucumberTest.class
+com\skillstorm\inventorymanagement\InventoryManagementApplicationTests.class
+com\skillstorm\inventorymanagement\services\WarehouseServiceTest.class

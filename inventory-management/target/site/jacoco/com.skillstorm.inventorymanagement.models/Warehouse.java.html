@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Warehouse.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">inventory-management</a> &gt; <a href="index.source.html" class="el_package">com.skillstorm.inventorymanagement.models</a> &gt; <span class="el_source">Warehouse.java</span></div><h1>Warehouse.java</h1><pre class="source lang-java linenums">package com.skillstorm.inventorymanagement.models;
+
+import java.util.Set;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+
+@Entity                           
+@Table(name = &quot;WAREHOUSES&quot;) 
+public class Warehouse {
+
+    @Id                                                  
+    @Column                                                 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)   
+    private int id;
+
+    @Column(name = &quot;warehouse_name&quot;)  
+    private String warehouseName;
+
+    @Column(name = &quot;city&quot;) 
+    private String city;
+
+    @Column(name = &quot;capacity&quot;) 
+    private int capacity;
+
+    @OneToMany(targetEntity = Shirt.class, mappedBy = &quot;warehouse&quot;)  
+    private Set&lt;Shirt&gt; shirts;
+
+<span class="nc" id="L34">    public Warehouse() {</span>
+<span class="nc" id="L35">    }</span>
+
+<span class="nc" id="L37">    public Warehouse(String warehouseName, String city, int capacity) {</span>
+<span class="nc" id="L38">        this.warehouseName = warehouseName;</span>
+<span class="nc" id="L39">        this.city = city;</span>
+<span class="nc" id="L40">        this.capacity = capacity;</span>
+<span class="nc" id="L41">    }</span>
+
+<span class="nc" id="L43">    public Warehouse(String warehouseName, String city, int capacity, Set&lt;Shirt&gt; shirts) {</span>
+<span class="nc" id="L44">        this.warehouseName = warehouseName;</span>
+<span class="nc" id="L45">        this.city = city;</span>
+<span class="nc" id="L46">        this.capacity = capacity;</span>
+<span class="nc" id="L47">        this.shirts = shirts;</span>
+<span class="nc" id="L48">    }</span>
+
+<span class="nc" id="L50">    public Warehouse(int id, String warehouseName, String city, int capacity, Set&lt;Shirt&gt; shirts) {</span>
+<span class="nc" id="L51">        this.id = id;</span>
+<span class="nc" id="L52">        this.warehouseName = warehouseName;</span>
+<span class="nc" id="L53">        this.city = city;</span>
+<span class="nc" id="L54">        this.capacity = capacity;</span>
+<span class="nc" id="L55">        this.shirts = shirts;</span>
+<span class="nc" id="L56">    }</span>
+
+    public int getId() {
+<span class="nc" id="L59">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="nc" id="L63">        this.id = id;</span>
+<span class="nc" id="L64">    }</span>
+
+    public String getWarehouseName() {
+<span class="nc" id="L67">        return warehouseName;</span>
+    }
+
+    public void setWarehouseName(String warehouseName) {
+<span class="nc" id="L71">        this.warehouseName = warehouseName;</span>
+<span class="nc" id="L72">    }</span>
+
+    public String getCity() {
+<span class="nc" id="L75">        return city;</span>
+    }
+
+    public void setCity(String city) {
+<span class="nc" id="L79">        this.city = city;</span>
+<span class="nc" id="L80">    }</span>
+
+    public int getCapacity() {
+<span class="nc" id="L83">        return capacity;</span>
+    }
+
+    public void setCapacity(int capacity) {
+<span class="nc" id="L87">        this.capacity = capacity;</span>
+<span class="nc" id="L88">    }</span>
+
+    public Set&lt;Shirt&gt; getShirts() {
+<span class="nc" id="L91">        return shirts;</span>
+    }
+
+    public void setShirts(Set&lt;Shirt&gt; shirts) {
+<span class="nc" id="L95">        this.shirts = shirts;</span>
+<span class="nc" id="L96">    }</span>
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L100">        final int prime = 31;</span>
+<span class="nc" id="L101">        int result = 1;</span>
+<span class="nc" id="L102">        result = prime * result + id;</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">        result = prime * result + ((warehouseName == null) ? 0 : warehouseName.hashCode());</span>
+<span class="nc bnc" id="L104" title="All 2 branches missed.">        result = prime * result + ((city == null) ? 0 : city.hashCode());</span>
+<span class="nc" id="L105">        result = prime * result + capacity;</span>
+<span class="nc bnc" id="L106" title="All 2 branches missed.">        result = prime * result + ((shirts == null) ? 0 : shirts.hashCode());</span>
+<span class="nc" id="L107">        return result;</span>
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+<span class="nc bnc" id="L112" title="All 2 branches missed.">        if (this == obj)</span>
+<span class="nc" id="L113">            return true;</span>
+<span class="nc bnc" id="L114" title="All 2 branches missed.">        if (obj == null)</span>
+<span class="nc" id="L115">            return false;</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">        if (getClass() != obj.getClass())</span>
+<span class="nc" id="L117">            return false;</span>
+<span class="nc" id="L118">        Warehouse other = (Warehouse) obj;</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">        if (id != other.id)</span>
+<span class="nc" id="L120">            return false;</span>
+<span class="nc bnc" id="L121" title="All 2 branches missed.">        if (warehouseName == null) {</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">            if (other.warehouseName != null)</span>
+<span class="nc" id="L123">                return false;</span>
+<span class="nc bnc" id="L124" title="All 2 branches missed.">        } else if (!warehouseName.equals(other.warehouseName))</span>
+<span class="nc" id="L125">            return false;</span>
+<span class="nc bnc" id="L126" title="All 2 branches missed.">        if (city == null) {</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">            if (other.city != null)</span>
+<span class="nc" id="L128">                return false;</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">        } else if (!city.equals(other.city))</span>
+<span class="nc" id="L130">            return false;</span>
+<span class="nc bnc" id="L131" title="All 2 branches missed.">        if (capacity != other.capacity)</span>
+<span class="nc" id="L132">            return false;</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">        if (shirts == null) {</span>
+<span class="nc bnc" id="L134" title="All 2 branches missed.">            if (other.shirts != null)</span>
+<span class="nc" id="L135">                return false;</span>
+<span class="nc bnc" id="L136" title="All 2 branches missed.">        } else if (!shirts.equals(other.shirts))</span>
+<span class="nc" id="L137">            return false;</span>
+<span class="nc" id="L138">        return true;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L143">        return &quot;Warehouse [id=&quot; + id + &quot;, warehouseName=&quot; + warehouseName + &quot;, city=&quot; + city + &quot;, capacity=&quot; + capacity + &quot;]&quot;;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

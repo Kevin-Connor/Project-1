@@ -1,0 +1,11 @@
+com\skillstorm\inventorymanagement\InventoryManagementApplication.class
+com\skillstorm\inventorymanagement\models\Shirt.class
+com\skillstorm\inventorymanagement\repositories\ShirtRepository.class
+com\skillstorm\inventorymanagement\repositories\WarehouseRepository.class
+com\skillstorm\inventorymanagement\models\Warehouse.class
+com\skillstorm\inventorymanagement\services\ShirtService.class
+com\skillstorm\inventorymanagement\controllers\WarehouseController.class
+com\skillstorm\inventorymanagement\controllers\ShirtController.class
+com\skillstorm\inventorymanagement\CorsConfig.class
+com\skillstorm\inventorymanagement\services\WarehouseService.class
+com\skillstorm\inventorymanagement\aspects\LoggingAspect.class
