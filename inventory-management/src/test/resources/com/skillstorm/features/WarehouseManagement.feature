@@ -1,3 +1,4 @@
+@warehouses
 Feature: Warehouse Management
 
   Scenario: Add a new warehouse to the system

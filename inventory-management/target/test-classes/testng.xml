@@ -2,9 +2,15 @@
 <suite name="Inventory Management Suite" parallel="false">
     <test name="Shirt Management Tests">
         <classes>
+            <class name="com.skillstorm.inventorymanagement.cucumber.RunCucumberTest"/>
             <class name="com.skillstorm.inventorymanagement.cucumber.ShirtsSteps"/>
+            <class name="com.skillstorm.inventorymanagement.cucumber.WarehouseSteps"/>
             <class name="com.skillstorm.inventorymanagement.models.ShirtTest"/>  
             <class name="com.skillstorm.inventorymanagement.models.WarehouseTest"/> 
+            <class name="com.skillstorm.inventorymanagement.services.WarehouseServiceTest"/> 
+            <class name="com.skillstorm.inventorymanagement.services.ShirtServiceTest"/> 
+            <class name="com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest"/> 
+            <class name="com.skillstorm.inventorymanagement.controllers.ShirtControllerTest"/>
         </classes>
     </test>
 </suite>

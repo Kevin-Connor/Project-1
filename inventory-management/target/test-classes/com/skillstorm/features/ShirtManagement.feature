@@ -1,3 +1,4 @@
+@shirts
 Feature: Shirt Management
 
   Scenario: Add a new shirt to the inventory

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Inventory Management Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Shirt Management Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.skillstorm.inventorymanagement.cucumber.RunCucumberTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.skillstorm.inventorymanagement.cucumber.RunCucumberTest -->
+    </classes>
+  </test> <!-- Shirt Management Tests(failed) -->
+</suite> <!-- Failed suite [Inventory Management Suite] -->

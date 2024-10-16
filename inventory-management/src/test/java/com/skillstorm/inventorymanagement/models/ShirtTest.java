@@ -53,13 +53,52 @@ public class ShirtTest {
     }
 
     @Test
-    public void testEquals() {
-        Shirt sameShirt = new Shirt(1, "Tiger", "L", warehouse);
-        Assert.assertEquals(shirt, sameShirt);
+public void testEqualsSameObject() {
+    Assert.assertTrue(shirt.equals(shirt)); // Same object should be equal
+}
 
-        Shirt differentShirt = new Shirt(2, "Lion", "M", warehouse);
-        Assert.assertNotEquals(shirt, differentShirt);
-    }
+@Test
+public void testEqualsNullObject() {
+    Assert.assertFalse(shirt.equals(null)); // Should not be equal to null
+}
+
+@Test
+public void testEqualsDifferentClass() {
+    Warehouse warehouse = new Warehouse("Different Warehouse", "Test City", 1000, null);
+    Assert.assertFalse(shirt.equals(warehouse)); // Should not be equal to an object of a different class
+}
+
+@Test
+public void testEqualsSameValues() {
+    Shirt sameShirt = new Shirt(1, "Tiger", "L", warehouse);
+    Assert.assertTrue(shirt.equals(sameShirt)); // Should be equal when all attributes are the same
+}
+
+@Test
+public void testEqualsDifferentId() {
+    Shirt differentShirt = new Shirt(2, "Tiger", "L", warehouse);
+    Assert.assertFalse(shirt.equals(differentShirt)); // Should not be equal with a different id
+}
+
+@Test
+public void testEqualsDifferentAnimal() {
+    Shirt differentShirt = new Shirt(1, "Lion", "L", warehouse);
+    Assert.assertFalse(shirt.equals(differentShirt)); // Should not be equal with a different animal
+}
+
+@Test
+public void testEqualsDifferentSize() {
+    Shirt differentShirt = new Shirt(1, "Tiger", "M", warehouse);
+    Assert.assertFalse(shirt.equals(differentShirt)); // Should not be equal with a different size
+}
+
+@Test
+public void testEqualsDifferentWarehouse() {
+    Warehouse differentWarehouse = new Warehouse(2, "Secondary Warehouse", "Los Angeles", 300, null);
+    Shirt differentShirt = new Shirt(1, "Tiger", "L", differentWarehouse);
+    Assert.assertFalse(shirt.equals(differentShirt)); // Should not be equal with a different warehouse
+}
+
 
     @Test
     public void testHashCode() {
@@ -74,5 +113,38 @@ public class ShirtTest {
     public void testToString() {
         String expected = "Shirt [id=1, animal=Tiger, size=L, warehouse=" + warehouse + "]";
         Assert.assertEquals(shirt.toString(), expected);
+    }
+
+    @Test
+    public void testDefaultConstructor() {
+        Shirt newShirt = new Shirt();
+        Assert.assertNotNull(newShirt);
+        Assert.assertNull(newShirt.getAnimal());
+        Assert.assertNull(newShirt.getSize());
+        Assert.assertNull(newShirt.getWarehouse());
+    }
+
+    @Test
+    public void testEqualsWithNullAndDifferentClass() {
+        // Check against null
+        Assert.assertNotEquals(shirt, null);
+
+        // Check against different class object
+        Assert.assertNotEquals(shirt, new Object());
+    }
+
+    @Test
+    public void testEqualsWithSelf() {
+        // Check against itself
+        Assert.assertEquals(shirt, shirt);
+    }
+
+    @Test
+    public void testHashCodeWithNullValues() {
+        // Create a Shirt with null values
+        Shirt shirtWithNullValues = new Shirt(0, null, null, null);
+        
+        // Ensure hashCode works even with null fields
+        Assert.assertNotNull(shirtWithNullValues.hashCode());
     }
 }

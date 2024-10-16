@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Shirt Management Tests"
+           tests="7"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.003">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testAddShirtWithExistingWarehouse"
+                time="0.001"
+                classname="com.skillstorm.inventorymanagement.services.ShirtServiceTest">
+            </testcase>
+            <testcase
+                name="testFindAllShirts"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.services.ShirtServiceTest">
+            </testcase>
+            <testcase
+                name="testDeleteShirt"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.services.ShirtServiceTest">
+            </testcase>
+            <testcase
+                name="testUpdateShirtsWarehouse"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.services.ShirtServiceTest">
+            </testcase>
+            <testcase
+                name="testAddShirtWithNewWarehouse"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.services.ShirtServiceTest">
+            </testcase>
+            <testcase
+                name="testSaveShirtWithExistingWarehouse"
+                time="0.001"
+                classname="com.skillstorm.inventorymanagement.services.ShirtServiceTest">
+            </testcase>
+            <testcase
+                name="testSaveShirtWithNewWarehouse"
+                time="0.001"
+                classname="com.skillstorm.inventorymanagement.services.ShirtServiceTest">
+            </testcase>
+</testsuite>

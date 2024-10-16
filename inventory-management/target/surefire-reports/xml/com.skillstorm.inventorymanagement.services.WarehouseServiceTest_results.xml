@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Shirt Management Tests"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.051">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testFindAllWarehouses"
+                time="0.001"
+                classname="com.skillstorm.inventorymanagement.services.WarehouseServiceTest">
+            </testcase>
+            <testcase
+                name="testSaveWarehouse"
+                time="0.002"
+                classname="com.skillstorm.inventorymanagement.services.WarehouseServiceTest">
+            </testcase>
+            <testcase
+                name="testDeleteWarehouse"
+                time="0.040"
+                classname="com.skillstorm.inventorymanagement.services.WarehouseServiceTest">
+            </testcase>
+            <testcase
+                name="testDeleteWarehouseAndAssociatedShirts"
+                time="0.008"
+                classname="com.skillstorm.inventorymanagement.services.WarehouseServiceTest">
+            </testcase>
+</testsuite>

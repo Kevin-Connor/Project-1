@@ -5,7 +5,7 @@ spring:
         #Postgres
         url: jdbc:postgresql://localhost:5432/shirts
         username: postgres
-        password:
+        password: 1$UMmertime
 
     output:
         ansi:

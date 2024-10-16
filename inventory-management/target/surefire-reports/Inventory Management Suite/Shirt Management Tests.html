@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Shirt Management Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>15/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>52/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 15 17:02:44 EDT 2024</td>
+<td>Started on:</td><td>Wed Oct 16 13:49:40 EDT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (126 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3205 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,337 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.cucumber.RunCucumberTest.runScenario()'><b>runScenario</b><br>Test class: com.skillstorm.inventorymanagement.cucumber.RunCucumberTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a new shirt to the inventory", "Shirt Management"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;KEVPC&apos;, ip: &apos;192.168.1.156&apos;
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)
+	at com.skillstorm.inventorymanagement.cucumber.ShirtsSteps.setUp(ShirtsSteps.java:21)
+Caused by: java.lang.NoSuchMethodError: &apos;java.util.stream.Collector com.google.common.collect.ImmutableSortedSet.toImmutableSortedSet(java.util.Comparator)&apos;
+	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$3(NewSessionPayload.java:171)
+	at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:540)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:541)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:188)
+	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:91)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:127)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)
+	at com.skillstorm.inventorymanagement.cucumber.ShirtsSteps.setUp(ShirtsSteps.java:21)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1274089441", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1274089441'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;KEVPC&apos;, ip: &apos;192.168.1.156&apos;
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)
+	at com.skillstorm.inventorymanagement.cucumber.ShirtsSteps.setUp(ShirtsSteps.java:21)
+Caused by: java.lang.NoSuchMethodError: &apos;java.util.stream.Collector com.google.common.collect.ImmutableSortedSet.toImmutableSortedSet(java.util.Comparator)&apos;
+	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$3(NewSessionPayload.java:171)
+	at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:540)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:541)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:188)
+	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:91)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:127)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:51)
+	at com.skillstorm.inventorymanagement.cucumber.ShirtsSteps.setUp(ShirtsSteps.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>1</td>
+<td>com.skillstorm.inventorymanagement.cucumber.RunCucumberTest@1804f60d</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.cucumber.RunCucumberTest.runScenario()'><b>runScenario</b><br>Test class: com.skillstorm.inventorymanagement.cucumber.RunCucumberTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a new warehouse to the system", "Warehouse Management"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;KEVPC&apos;, ip: &apos;192.168.1.156&apos;
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.skillstorm.inventorymanagement.cucumber.WarehouseSteps.before(WarehouseSteps.java:23)
+Caused by: java.lang.NoSuchMethodError: &apos;java.util.stream.Collector com.google.common.collect.ImmutableSortedSet.toImmutableSortedSet(java.util.Comparator)&apos;
+	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$3(NewSessionPayload.java:171)
+	at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:540)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:541)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:188)
+	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:91)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:127)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.skillstorm.inventorymanagement.cucumber.WarehouseSteps.before(WarehouseSteps.java:23)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace596848689", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace596848689'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: &apos;KEVPC&apos;, ip: &apos;192.168.1.156&apos;
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.skillstorm.inventorymanagement.cucumber.WarehouseSteps.before(WarehouseSteps.java:23)
+Caused by: java.lang.NoSuchMethodError: &apos;java.util.stream.Collector com.google.common.collect.ImmutableSortedSet.toImmutableSortedSet(java.util.Comparator)&apos;
+	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$3(NewSessionPayload.java:171)
+	at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:540)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$15$1.accept(ReferencePipeline.java:541)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:188)
+	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:91)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:127)
+	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at com.skillstorm.inventorymanagement.cucumber.WarehouseSteps.before(WarehouseSteps.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.cucumber.RunCucumberTest@1804f60d</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,80 +407,265 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testShirts()'><b>testShirts</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td title='com.skillstorm.inventorymanagement.services.WarehouseServiceTest.testFindAllWarehouses()'><b>testFindAllWarehouses</b><br>Test class: com.skillstorm.inventorymanagement.services.WarehouseServiceTest</td>
 <td></td>
 <td>0</td>
-<td>com.skillstorm.inventorymanagement.models.WarehouseTest@702ed190</td></tr>
-<tr>
-<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testId()'><b>testId</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
-<td></td>
-<td>0</td>
-<td>com.skillstorm.inventorymanagement.models.WarehouseTest@702ed190</td></tr>
+<td>com.skillstorm.inventorymanagement.services.WarehouseServiceTest@6ebd78d1</td></tr>
 <tr>
 <td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testEquals()'><b>testEquals</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
 <td></td>
 <td>0</td>
-<td>com.skillstorm.inventorymanagement.models.WarehouseTest@702ed190</td></tr>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
 <tr>
-<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testSize()'><b>testSize</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td title='com.skillstorm.inventorymanagement.controllers.ShirtControllerTest.testAddShirt()'><b>testAddShirt</b><br>Test class: com.skillstorm.inventorymanagement.controllers.ShirtControllerTest</td>
 <td></td>
 <td>0</td>
-<td>com.skillstorm.inventorymanagement.models.ShirtTest@37fbe4a8</td></tr>
-<tr>
-<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testHashCode()'><b>testHashCode</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
-<td></td>
-<td>0</td>
-<td>com.skillstorm.inventorymanagement.models.ShirtTest@37fbe4a8</td></tr>
-<tr>
-<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testAnimal()'><b>testAnimal</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
-<td></td>
-<td>0</td>
-<td>com.skillstorm.inventorymanagement.models.ShirtTest@37fbe4a8</td></tr>
-<tr>
-<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testHashCode()'><b>testHashCode</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
-<td></td>
-<td>0</td>
-<td>com.skillstorm.inventorymanagement.models.WarehouseTest@702ed190</td></tr>
-<tr>
-<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEquals()'><b>testEquals</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
-<td></td>
-<td>0</td>
-<td>com.skillstorm.inventorymanagement.models.ShirtTest@37fbe4a8</td></tr>
-<tr>
-<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testWarehouse()'><b>testWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
-<td></td>
-<td>0</td>
-<td>com.skillstorm.inventorymanagement.models.ShirtTest@37fbe4a8</td></tr>
+<td>com.skillstorm.inventorymanagement.controllers.ShirtControllerTest@68ed96ca</td></tr>
 <tr>
 <td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testCapacity()'><b>testCapacity</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
 <td></td>
 <td>0</td>
-<td>com.skillstorm.inventorymanagement.models.WarehouseTest@702ed190</td></tr>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
 <tr>
-<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testId()'><b>testId</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testShirts()'><b>testShirts</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
 <td></td>
 <td>0</td>
-<td>com.skillstorm.inventorymanagement.models.ShirtTest@37fbe4a8</td></tr>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
 <tr>
-<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testToString()'><b>testToString</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testSize()'><b>testSize</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
 <td></td>
 <td>0</td>
-<td>com.skillstorm.inventorymanagement.models.WarehouseTest@702ed190</td></tr>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
 <tr>
-<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testWarehouseName()'><b>testWarehouseName</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testConstructorWithoutShirts()'><b>testConstructorWithoutShirts</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
 <td></td>
 <td>0</td>
-<td>com.skillstorm.inventorymanagement.models.WarehouseTest@702ed190</td></tr>
-<tr>
-<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testToString()'><b>testToString</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
-<td></td>
-<td>0</td>
-<td>com.skillstorm.inventorymanagement.models.ShirtTest@37fbe4a8</td></tr>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
 <tr>
 <td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testCity()'><b>testCity</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
 <td></td>
 <td>0</td>
-<td>com.skillstorm.inventorymanagement.models.WarehouseTest@702ed190</td></tr>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEqualsNullObject()'><b>testEqualsNullObject</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testHashCode()'><b>testHashCode</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testEqualsWithNullFields()'><b>testEqualsWithNullFields</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.services.ShirtServiceTest.testAddShirtWithExistingWarehouse()'><b>testAddShirtWithExistingWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.services.ShirtServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.services.ShirtServiceTest@436390f4</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.services.ShirtServiceTest.testFindAllShirts()'><b>testFindAllShirts</b><br>Test class: com.skillstorm.inventorymanagement.services.ShirtServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.services.ShirtServiceTest@436390f4</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEqualsDifferentId()'><b>testEqualsDifferentId</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEqualsSameValues()'><b>testEqualsSameValues</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.controllers.ShirtControllerTest.testCreateShirt()'><b>testCreateShirt</b><br>Test class: com.skillstorm.inventorymanagement.controllers.ShirtControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.controllers.ShirtControllerTest@68ed96ca</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testHashCodeWithNullValues()'><b>testHashCodeWithNullValues</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testConstructorWithNameCityCapacityAndShirts()'><b>testConstructorWithNameCityCapacityAndShirts</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testId()'><b>testId</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEqualsWithSelf()'><b>testEqualsWithSelf</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest.testDeleteWarehouseFailure()'><b>testDeleteWarehouseFailure</b><br>Test class: com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest@4d157787</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEqualsDifferentClass()'><b>testEqualsDifferentClass</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEqualsDifferentAnimal()'><b>testEqualsDifferentAnimal</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.controllers.ShirtControllerTest.testFindAllShirts()'><b>testFindAllShirts</b><br>Test class: com.skillstorm.inventorymanagement.controllers.ShirtControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.controllers.ShirtControllerTest@68ed96ca</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.services.WarehouseServiceTest.testSaveWarehouse()'><b>testSaveWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.services.WarehouseServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.services.WarehouseServiceTest@6ebd78d1</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.services.ShirtServiceTest.testDeleteShirt()'><b>testDeleteShirt</b><br>Test class: com.skillstorm.inventorymanagement.services.ShirtServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.services.ShirtServiceTest@436390f4</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest.testFindAllWarehouses()'><b>testFindAllWarehouses</b><br>Test class: com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest@4d157787</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.controllers.ShirtControllerTest.testDeleteShirt()'><b>testDeleteShirt</b><br>Test class: com.skillstorm.inventorymanagement.controllers.ShirtControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.controllers.ShirtControllerTest@68ed96ca</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest.testCreateWarehouse()'><b>testCreateWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest@4d157787</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.services.WarehouseServiceTest.testDeleteWarehouse()'><b>testDeleteWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.services.WarehouseServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.services.WarehouseServiceTest@6ebd78d1</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testAnimal()'><b>testAnimal</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testWarehouse()'><b>testWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.services.ShirtServiceTest.testUpdateShirtsWarehouse()'><b>testUpdateShirtsWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.services.ShirtServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.services.ShirtServiceTest@436390f4</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.controllers.ShirtControllerTest.testUpdateShirt()'><b>testUpdateShirt</b><br>Test class: com.skillstorm.inventorymanagement.controllers.ShirtControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.controllers.ShirtControllerTest@68ed96ca</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEqualsSameObject()'><b>testEqualsSameObject</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testDefaultConstructor()'><b>testDefaultConstructor</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.services.ShirtServiceTest.testAddShirtWithNewWarehouse()'><b>testAddShirtWithNewWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.services.ShirtServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.services.ShirtServiceTest@436390f4</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEqualsDifferentWarehouse()'><b>testEqualsDifferentWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEqualsDifferentSize()'><b>testEqualsDifferentSize</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest.testUpdateWarehouse()'><b>testUpdateWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest@4d157787</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testToString()'><b>testToString</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testHashCodeWithNullValues()'><b>testHashCodeWithNullValues</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testWarehouseName()'><b>testWarehouseName</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testToString()'><b>testToString</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest.testDeleteWarehouseSuccess()'><b>testDeleteWarehouseSuccess</b><br>Test class: com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.controllers.WarehouseControllerTest@4d157787</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testId()'><b>testId</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testHashCode()'><b>testHashCode</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.WarehouseTest.testDefaultConstructor()'><b>testDefaultConstructor</b><br>Test class: com.skillstorm.inventorymanagement.models.WarehouseTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.WarehouseTest@1af7f54a</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.services.ShirtServiceTest.testSaveShirtWithExistingWarehouse()'><b>testSaveShirtWithExistingWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.services.ShirtServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.services.ShirtServiceTest@436390f4</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.models.ShirtTest.testEqualsWithNullAndDifferentClass()'><b>testEqualsWithNullAndDifferentClass</b><br>Test class: com.skillstorm.inventorymanagement.models.ShirtTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.models.ShirtTest@58dea0a5</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.services.ShirtServiceTest.testSaveShirtWithNewWarehouse()'><b>testSaveShirtWithNewWarehouse</b><br>Test class: com.skillstorm.inventorymanagement.services.ShirtServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.services.ShirtServiceTest@436390f4</td></tr>
+<tr>
+<td title='com.skillstorm.inventorymanagement.services.WarehouseServiceTest.testDeleteWarehouseAndAssociatedShirts()'><b>testDeleteWarehouseAndAssociatedShirts</b><br>Test class: com.skillstorm.inventorymanagement.services.WarehouseServiceTest</td>
+<td></td>
+<td>0</td>
+<td>com.skillstorm.inventorymanagement.services.WarehouseServiceTest@6ebd78d1</td></tr>
 </table><p>
 </body>
 </html>

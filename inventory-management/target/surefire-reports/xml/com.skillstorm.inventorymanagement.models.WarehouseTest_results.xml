@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Shirt Management Tests"
-           tests="8"
+           tests="13"
            failures="0"
            errors="0"
            skipped="0"
@@ -10,17 +10,27 @@
 
 
             <testcase
+                name="testEquals"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testCapacity"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
                 name="testShirts"
                 time="0.000"
                 classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
             </testcase>
             <testcase
-                name="testId"
+                name="testConstructorWithoutShirts"
                 time="0.001"
                 classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
             </testcase>
             <testcase
-                name="testEquals"
+                name="testCity"
                 time="0.000"
                 classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
             </testcase>
@@ -30,7 +40,22 @@
                 classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
             </testcase>
             <testcase
-                name="testCapacity"
+                name="testEqualsWithNullFields"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testHashCodeWithNullValues"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testConstructorWithNameCityCapacityAndShirts"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
+            </testcase>
+            <testcase
+                name="testId"
                 time="0.000"
                 classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
             </testcase>
@@ -45,7 +70,7 @@
                 classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
             </testcase>
             <testcase
-                name="testCity"
+                name="testDefaultConstructor"
                 time="0.000"
                 classname="com.skillstorm.inventorymanagement.models.WarehouseTest">
             </testcase>

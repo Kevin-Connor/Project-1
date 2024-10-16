@@ -68,22 +68,129 @@ public class WarehouseTest {
         Assert.assertEquals(warehouse.getShirts().iterator().next().getAnimal(), "Elephant");
     }
 
+    // Test for default constructor
+    @Test
+    public void testDefaultConstructor() {
+        Warehouse newWarehouse = new Warehouse();
+        Assert.assertNotNull(newWarehouse);
+        Assert.assertEquals(newWarehouse.getId(), 0);  // Default int value
+        Assert.assertNull(newWarehouse.getWarehouseName());
+        Assert.assertNull(newWarehouse.getCity());
+        Assert.assertEquals(newWarehouse.getCapacity(), 0);  // Default int value
+        Assert.assertNull(newWarehouse.getShirts());
+    }
+
+    // Test for constructor without shirts
+    @Test
+    public void testConstructorWithoutShirts() {
+        Warehouse newWarehouse = new Warehouse("Test Warehouse", "Test City", 1000);
+        Assert.assertEquals(newWarehouse.getWarehouseName(), "Test Warehouse");
+        Assert.assertEquals(newWarehouse.getCity(), "Test City");
+        Assert.assertEquals(newWarehouse.getCapacity(), 1000);
+        Assert.assertNull(newWarehouse.getShirts());  // Default null value
+    }
+    @Test
+    public void testConstructorWithNameCityCapacityAndShirts() {
+        Set<Shirt> shirts = new HashSet<>();
+        shirts.add(new Shirt(1, "Lion", "M", warehouse));
+
+        Warehouse newWarehouse = new Warehouse("Test Warehouse", "Test City", 1000, shirts);
+
+        Assert.assertEquals(newWarehouse.getWarehouseName(), "Test Warehouse");
+        Assert.assertEquals(newWarehouse.getCity(), "Test City");
+        Assert.assertEquals(newWarehouse.getCapacity(), 1000);
+        Assert.assertEquals(newWarehouse.getShirts(), shirts);
+    }
+
+
     @Test
     public void testEquals() {
-        Warehouse sameWarehouse = new Warehouse(1, "Main Warehouse", "New York", 500, shirts);
-        Assert.assertEquals(warehouse, sameWarehouse);
+        // Same object
+        Assert.assertTrue(warehouse.equals(warehouse));
 
-        Warehouse differentWarehouse = new Warehouse(2, "Other Warehouse", "Boston", 300, new HashSet<>());
-        Assert.assertNotEquals(warehouse, differentWarehouse);
+        // Object with same field values
+        Warehouse sameWarehouse = new Warehouse(1, "Main Warehouse", "New York", 500, shirts);
+        Assert.assertTrue(warehouse.equals(sameWarehouse));
+
+        // Different id
+        Warehouse differentIdWarehouse = new Warehouse(2, "Main Warehouse", "New York", 500, shirts);
+        Assert.assertFalse(warehouse.equals(differentIdWarehouse));
+
+        // Different warehouseName
+        Warehouse differentNameWarehouse = new Warehouse(1, "Secondary Warehouse", "New York", 500, shirts);
+        Assert.assertFalse(warehouse.equals(differentNameWarehouse));
+
+        // Different city
+        Warehouse differentCityWarehouse = new Warehouse(1, "Main Warehouse", "Los Angeles", 500, shirts);
+        Assert.assertFalse(warehouse.equals(differentCityWarehouse));
+
+        // Different capacity
+        Warehouse differentCapacityWarehouse = new Warehouse(1, "Main Warehouse", "New York", 1000, shirts);
+        Assert.assertFalse(warehouse.equals(differentCapacityWarehouse));
+
+        // Different shirts
+        Set<Shirt> newShirts = new HashSet<>();
+        newShirts.add(new Shirt(1, "Lion", "M", warehouse));
+        Warehouse differentShirtsWarehouse = new Warehouse(1, "Main Warehouse", "New York", 500, newShirts);
+        Assert.assertFalse(warehouse.equals(differentShirtsWarehouse));
+
+        // Null case
+        Assert.assertFalse(warehouse.equals(null));
+
+        // Different class
+        Assert.assertFalse(warehouse.equals(new Object()));
+    }
+
+    @Test
+    public void testEqualsWithNullFields() {
+        // Case where warehouseName, city, and shirts are null
+        Warehouse warehouseWithNullFields = new Warehouse(1, null, null, 500, null);
+        Warehouse warehouseWithNullFieldsSame = new Warehouse(1, null, null, 500, null);
+
+        // Ensure that equals works when some fields are null
+        Assert.assertTrue(warehouseWithNullFields.equals(warehouseWithNullFieldsSame));
+
+        // Ensure equality fails when only one of the null fields is different
+        Warehouse warehouseWithDifferentNullField = new Warehouse(1, "Main Warehouse", null, 500, null);
+        Assert.assertFalse(warehouseWithNullFields.equals(warehouseWithDifferentNullField));
     }
 
     @Test
     public void testHashCode() {
+        // Same object should have the same hashCode
         Warehouse sameWarehouse = new Warehouse(1, "Main Warehouse", "New York", 500, shirts);
         Assert.assertEquals(warehouse.hashCode(), sameWarehouse.hashCode());
 
-        Warehouse differentWarehouse = new Warehouse(2, "Other Warehouse", "Boston", 300, new HashSet<>());
-        Assert.assertNotEquals(warehouse.hashCode(), differentWarehouse.hashCode());
+        // Different id should result in different hashCode
+        Warehouse differentIdWarehouse = new Warehouse(2, "Main Warehouse", "New York", 500, shirts);
+        Assert.assertNotEquals(warehouse.hashCode(), differentIdWarehouse.hashCode());
+
+        // Different warehouseName should result in different hashCode
+        Warehouse differentNameWarehouse = new Warehouse(1, "Secondary Warehouse", "New York", 500, shirts);
+        Assert.assertNotEquals(warehouse.hashCode(), differentNameWarehouse.hashCode());
+
+        // Different city should result in different hashCode
+        Warehouse differentCityWarehouse = new Warehouse(1, "Main Warehouse", "Los Angeles", 500, shirts);
+        Assert.assertNotEquals(warehouse.hashCode(), differentCityWarehouse.hashCode());
+
+        // Different capacity should result in different hashCode
+        Warehouse differentCapacityWarehouse = new Warehouse(1, "Main Warehouse", "New York", 1000, shirts);
+        Assert.assertNotEquals(warehouse.hashCode(), differentCapacityWarehouse.hashCode());
+
+        // Different shirts should result in different hashCode
+        Set<Shirt> newShirts = new HashSet<>();
+        newShirts.add(new Shirt(1, "Lion", "M", warehouse));
+        Warehouse differentShirtsWarehouse = new Warehouse(1, "Main Warehouse", "New York", 500, newShirts);
+        Assert.assertNotEquals(warehouse.hashCode(), differentShirtsWarehouse.hashCode());
+    }
+
+    @Test
+    public void testHashCodeWithNullValues() {
+        // Create a Warehouse with null values
+        Warehouse warehouseWithNullValues = new Warehouse(0, null, null, 0, null);
+
+        // Ensure hashCode works even with null fields
+        Assert.assertNotNull(warehouseWithNullValues.hashCode());
     }
 
     @Test

@@ -1,16 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Shirt Management Tests"
-           tests="7"
+           tests="18"
            failures="0"
            errors="0"
            skipped="0"
-           time="0.014">
+           time="0.012">
     <properties></properties>
 
 
 
             <testcase
                 name="testSize"
+                time="0.001"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testEqualsNullObject"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testEqualsDifferentId"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testEqualsSameValues"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testEqualsWithSelf"
+                time="0.001"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testEqualsDifferentClass"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testEqualsDifferentAnimal"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testAnimal"
+                time="0.002"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testWarehouse"
+                time="0.001"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testEqualsSameObject"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testDefaultConstructor"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testEqualsDifferentWarehouse"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testEqualsDifferentSize"
+                time="0.001"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testHashCodeWithNullValues"
+                time="0.000"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testToString"
+                time="0.005"
+                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
+            </testcase>
+            <testcase
+                name="testId"
                 time="0.000"
                 classname="com.skillstorm.inventorymanagement.models.ShirtTest">
             </testcase>
@@ -20,28 +95,8 @@
                 classname="com.skillstorm.inventorymanagement.models.ShirtTest">
             </testcase>
             <testcase
-                name="testAnimal"
-                time="0.007"
-                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
-            </testcase>
-            <testcase
-                name="testEquals"
-                time="0.000"
-                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
-            </testcase>
-            <testcase
-                name="testWarehouse"
+                name="testEqualsWithNullAndDifferentClass"
                 time="0.001"
-                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
-            </testcase>
-            <testcase
-                name="testId"
-                time="0.000"
-                classname="com.skillstorm.inventorymanagement.models.ShirtTest">
-            </testcase>
-            <testcase
-                name="testToString"
-                time="0.006"
                 classname="com.skillstorm.inventorymanagement.models.ShirtTest">
             </testcase>
 </testsuite>
